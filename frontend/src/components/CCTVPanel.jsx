@@ -12,7 +12,7 @@ const CCTVPanel = () => {
   useEffect(() => {
     const fetchCCTV = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/cctv');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/cctv`);
         setCameras(response.data);
         setFilteredCameras(response.data);
         

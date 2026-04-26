@@ -20,7 +20,7 @@ const NewsPanel = () => {
     const fetchNews = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`http://localhost:5001/api/news?category=${category}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/news?category=${category}`);
         setNews(response.data);
       } catch (err) {
         console.error("Failed to fetch News", err);

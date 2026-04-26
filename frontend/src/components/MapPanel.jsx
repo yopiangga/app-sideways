@@ -28,7 +28,7 @@ const MapPanel = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/ais');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/ais`);
         setShips(response.data);
       } catch (err) {
         console.error("Failed to fetch map data", err);
