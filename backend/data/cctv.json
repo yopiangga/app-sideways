@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Jakarta Port Entry",
+    "location": "Tanjung Priok",
+    "area": "Maritime",
+    "url": "https://www.youtube.com/embed/S_8nB35S1_8"
+  },
+  {
+    "id": 2,
+    "name": "Soekarno-Hatta Terminal 3",
+    "location": "Tangerang",
+    "area": "Aviation",
+    "url": "https://www.youtube.com/embed/5_X9X9X9X9X" 
+  },
+  {
+    "id": 3,
+    "name": "Semanggi Interchange",
+    "location": "Jakarta",
+    "area": "Traffic",
+    "url": "https://www.youtube.com/embed/6_X9X9X9X9X"
+  },
+  {
+    "id": 4,
+    "name": "Bundaran HI",
+    "location": "Jakarta",
+    "area": "Traffic",
+    "url": "https://www.youtube.com/embed/7_X9X9X9X9X"
+  },
+  {
+    "id": 5,
+    "name": "Surabaya North Quay",
+    "location": "Surabaya",
+    "area": "Maritime",
+    "url": "https://www.youtube.com/embed/8_X9X9X9X9X"
+  }
+]

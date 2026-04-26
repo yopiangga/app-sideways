@@ -1,0 +1,48 @@
+import React, { useState, useEffect } from 'react';
+import { Bell, Search, Globe, User } from 'lucide-react';
+
+const Topbar = () => {
+  const [time, setTime] = useState(new Date());
+  const username = localStorage.getItem('username') || 'Admin';
+
+  useEffect(() => {
+    const timer = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="h-16 border-b border-border bg-panel/50 backdrop-blur-md flex items-center justify-between px-8 z-20">
+      <div className="flex items-center space-x-6">
+        <div className="text-xs font-mono text-slate-500 bg-background px-3 py-1.5 rounded-full border border-border">
+          GPS: 0.7892° S, 113.9213° E
+        </div>
+        <div className="text-xs font-mono text-accent-primary animate-pulse-soft">
+          SYSTEM STATUS: OPTIMAL
+        </div>
+      </div>
+
+      <div className="flex items-center space-x-6">
+        <div className="text-right mr-4 hidden md:block">
+          <div className="text-sm font-bold text-white uppercase tracking-tight">
+            {time.toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' })} UTC
+          </div>
+          <div className="text-[10px] text-slate-500 font-mono">
+            {time.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })}
+          </div>
+        </div>
+
+        <div className="flex items-center space-x-2 border-l border-border pl-6">
+          <div className="flex flex-col items-end mr-3">
+            <span className="text-xs font-bold text-white uppercase">{username}</span>
+            <span className="text-[10px] text-accent-secondary">SYSTEM OPERATOR</span>
+          </div>
+          <div className="w-10 h-10 rounded-full bg-accent-primary/20 border border-accent-primary/40 flex items-center justify-center overflow-hidden">
+            <User size={20} className="text-accent-primary" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Topbar;
