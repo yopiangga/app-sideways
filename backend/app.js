@@ -65,6 +65,15 @@ app.get('/api/cctv', authenticateToken, (req, res) => {
     });
 });
 
+app.get('/api/cctv-dki', authenticateToken, (req, res) => {
+    const dataPath = path.join(__dirname, 'data', 'dki.json');
+    fs.readFile(dataPath, 'utf8', (err, data) => {
+        if (err) return res.status(500).json({ message: 'Error reading DKI CCTV data' });
+        const jsonData = JSON.parse(data);
+        res.json(jsonData.data || []);
+    });
+});
+
 app.get('/api/tv-streams', authenticateToken, (req, res) => {
     const dataPath = path.join(__dirname, 'data', 'tv_streams.json');
     fs.readFile(dataPath, 'utf8', (err, data) => {
