@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Bell, Search, Globe, User } from 'lucide-react';
+import { Bell, Search, Globe, User, ShieldAlert, LayoutDashboard } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Topbar = () => {
   const [time, setTime] = useState(new Date());
+  const location = useLocation();
   const username = localStorage.getItem('username') || 'Admin';
 
   useEffect(() => {
@@ -13,10 +15,34 @@ const Topbar = () => {
   return (
     <div className="h-16 border-b border-border bg-panel/50 backdrop-blur-md flex items-center justify-between px-8 z-20">
       <div className="flex items-center space-x-6">
-        <div className="text-xs font-mono text-slate-500 bg-background px-3 py-1.5 rounded-full border border-border">
+        <div className="flex items-center space-x-2 mr-4">
+          <Link 
+            to="/dashboard"
+            className={`flex items-center space-x-2 px-3 py-1.5 rounded-lg transition-all text-xs font-bold uppercase tracking-tight ${
+              location.pathname === '/dashboard' 
+                ? 'bg-accent-primary/10 text-accent-primary border border-accent-primary/20' 
+                : 'text-slate-500 hover:text-white'
+            }`}
+          >
+            <LayoutDashboard size={14} />
+            <span>Dashboard</span>
+          </Link>
+          <Link 
+            to="/surveillance"
+            className={`flex items-center space-x-2 px-3 py-1.5 rounded-lg transition-all text-xs font-bold uppercase tracking-tight ${
+              location.pathname === '/surveillance' 
+                ? 'bg-accent-primary/10 text-accent-primary border border-accent-primary/20' 
+                : 'text-slate-500 hover:text-white'
+            }`}
+          >
+            <ShieldAlert size={14} />
+            <span>Matrix</span>
+          </Link>
+        </div>
+        <div className="text-xs font-mono text-slate-500 bg-background px-3 py-1.5 rounded-full border border-border hidden xl:block">
           GPS: 0.7892° S, 113.9213° E
         </div>
-        <div className="text-xs font-mono text-accent-primary animate-pulse-soft">
+        <div className="text-xs font-mono text-accent-primary animate-pulse-soft hidden md:block">
           SYSTEM STATUS: OPTIMAL
         </div>
       </div>

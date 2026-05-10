@@ -1,0 +1,119 @@
+[
+  {
+    "id": "tvone",
+    "name": "tvOne",
+    "region": "Indonesia",
+    "channelId": "UCER4rvDnRBPr_ncYW4UCZjg",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCER4rvDnRBPr_ncYW4UCZjg&autoplay=1&mute=1",
+    "description": "Live News & Talkshow",
+    "location": "Jakarta, Indonesia"
+  },
+  {
+    "id": "kompastv",
+    "name": "Kompas TV",
+    "region": "Indonesia",
+    "channelId": "UC5BMIWZe9isJXLZZWPWvBlg",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UC5BMIWZe9isJXLZZWPWvBlg&autoplay=1&mute=1",
+    "description": "Independen Terpercaya",
+    "location": "Jakarta, Indonesia"
+  },
+  {
+    "id": "metrotv",
+    "name": "Metro TV",
+    "region": "Indonesia",
+    "channelId": "UCzl0OrB3-ehunyotIQvK77A",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCzl0OrB3-ehunyotIQvK77A&autoplay=1&mute=1",
+    "description": "Knowledge to Elevate",
+    "location": "Jakarta, Indonesia"
+  },
+  {
+    "id": "cnnid",
+    "name": "CNN Indonesia",
+    "region": "Indonesia",
+    "channelId": "UCKII0Ml9S5wneKbHswmUrIQ",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCKII0Ml9S5wneKbHswmUrIQ&autoplay=1&mute=1",
+    "description": "Terdepan Mengabarkan",
+    "location": "Jakarta, Indonesia"
+  },
+  {
+    "id": "inews",
+    "name": "iNews",
+    "region": "Indonesia",
+    "channelId": "UCoSkllfpgmFHtbVK835QaQg",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCoSkllfpgmFHtbVK835QaQg&autoplay=1&mute=1",
+    "description": "Indonesia Newscast",
+    "location": "Jakarta, Indonesia"
+  },
+  {
+    "id": "btv",
+    "name": "BTV (BeritaSatu)",
+    "region": "Indonesia",
+    "channelId": "UCo6NXGgBiaXcvdF2vHXGB4A",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCo6NXGgBiaXcvdF2vHXGB4A&autoplay=1&mute=1",
+    "description": "Bersatu Menginspirasi",
+    "location": "Jakarta, Indonesia"
+  },
+  {
+    "id": "aljazeera",
+    "name": "Al Jazeera English",
+    "region": "International",
+    "channelId": "UCNye-wNBqNL5ZzHSJj3l8Bg",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCNye-wNBqNL5ZzHSJj3l8Bg&autoplay=1&mute=1",
+    "description": "Global News & Features",
+    "location": "Doha, Qatar"
+  },
+  {
+    "id": "skynews",
+    "name": "Sky News",
+    "region": "International",
+    "channelId": "UCoMdktPbSTixAyNGwb-UYkQ",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCoMdktPbSTixAyNGwb-UYkQ&autoplay=1&mute=1",
+    "description": "First for Breaking News",
+    "location": "London, UK"
+  },
+  {
+    "id": "abcnews",
+    "name": "ABC News",
+    "region": "International",
+    "channelId": "UCBi2mrWuNuyYy4gbM6fU18Q",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCBi2mrWuNuyYy4gbM6fU18Q&autoplay=1&mute=1",
+    "description": "America's #1 News",
+    "location": "New York, USA"
+  },
+  {
+    "id": "dw",
+    "name": "DW News",
+    "region": "International",
+    "channelId": "UCknLrEdhRCp1aegoMqRaCZg",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCknLrEdhRCp1aegoMqRaCZg&autoplay=1&mute=1",
+    "description": "Made for minds.",
+    "location": "Bonn, Germany"
+  },
+  {
+    "id": "france24",
+    "name": "France 24",
+    "region": "International",
+    "channelId": "UCQfwfsi5VrQ8yKZ-UWmAEFg",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCQfwfsi5VrQ8yKZ-UWmAEFg&autoplay=1&mute=1",
+    "description": "Liberté, Égalité, Actualité",
+    "location": "Paris, France"
+  },
+  {
+    "id": "trtworld",
+    "name": "TRT World",
+    "region": "International",
+    "channelId": "UC7fWeaHhqgM4Ry-RMpM2YYw",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UC7fWeaHhqgM4Ry-RMpM2YYw&autoplay=1&mute=1",
+    "description": "Where News Inspires Change",
+    "location": "Istanbul, Turkey"
+  },
+  {
+    "id": "bloomberg",
+    "name": "Bloomberg Television",
+    "region": "International",
+    "channelId": "UCIALMKvObZNtJ6AmdCLP7Lg",
+    "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCIALMKvObZNtJ6AmdCLP7Lg&autoplay=1&mute=1",
+    "description": "Business & Financial News",
+    "location": "Global"
+  }
+]

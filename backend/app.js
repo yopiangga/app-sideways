@@ -64,6 +64,14 @@ app.get('/api/cctv', authenticateToken, (req, res) => {
     });
 });
 
+app.get('/api/tv-streams', authenticateToken, (req, res) => {
+    const dataPath = path.join(__dirname, 'data', 'tv_streams.json');
+    fs.readFile(dataPath, 'utf8', (err, data) => {
+        if (err) return res.status(500).json({ message: 'Error reading TV streams data' });
+        res.json(JSON.parse(data));
+    });
+});
+
 app.get('/api/news', authenticateToken, async (req, res) => {
     const { category = 'top' } = req.query;
     
