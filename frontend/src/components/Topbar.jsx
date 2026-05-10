@@ -38,6 +38,15 @@ const Topbar = () => {
             <ShieldAlert size={14} />
             <span>Matrix</span>
           </Link>
+          <a 
+            href="https://www.worldmonitor.app/?lat=20.0000&lon=0.0000&zoom=1.00&view=global&timeRange=7d&layers=conflicts%2Cbases%2Chotspots%2Cnuclear%2Csanctions%2Cweather%2Ceconomic%2Cwaterways%2Coutages%2Cmilitary%2Cnatural%2CiranAttacks"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 px-3 py-1.5 rounded-lg transition-all text-xs font-bold uppercase tracking-tight text-slate-500 hover:text-accent-secondary hover:bg-accent-secondary/10 border border-transparent hover:border-accent-secondary/20"
+          >
+            <Globe size={14} />
+            <span>World Monitor</span>
+          </a>
         </div>
         <div className="text-xs font-mono text-slate-500 bg-background px-3 py-1.5 rounded-full border border-border hidden xl:block">
           GPS: 0.7892° S, 113.9213° E

@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const feedid = require('./modules/feedid/src');
 const AISService = require('./aisService');
+const openAIService = require('./openAIService');
 require('dotenv').config();
 
 const app = express();
@@ -127,6 +128,33 @@ app.get('/api/news', authenticateToken, async (req, res) => {
     } catch (error) {
         console.error('Error fetching news:', error);
         res.status(500).json({ message: 'Error fetching news' });
+    }
+});
+
+app.get('/api/news-trends', authenticateToken, async (req, res) => {
+    try {
+        const [antara, cnn, tempo] = await Promise.all([
+            feedid.antara.terbaru(),
+            feedid.cnn.terbaru(),
+            feedid.tempo.nasional()
+        ]);
+        
+        const newsItems = [
+            ...(antara.data?.posts || []).map(p => ({ ...p, source: 'Antara' })),
+            ...(cnn.data?.posts || []).map(p => ({ ...p, source: 'CNN Indonesia' })),
+            ...(tempo.data?.posts || []).map(p => ({ ...p, source: 'Tempo' }))
+        ];
+
+        const analysis = await openAIService.analyzeTrends(newsItems);
+        
+        if (!analysis) {
+            return res.status(500).json({ message: 'Error analyzing trends' });
+        }
+
+        res.json(analysis);
+    } catch (error) {
+        console.error('Error fetching trends:', error);
+        res.status(500).json({ message: 'Error fetching trends' });
     }
 });
 

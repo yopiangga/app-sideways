@@ -3,6 +3,7 @@ import Topbar from '../components/Topbar';
 import MapPanel from '../components/MapPanel';
 import CCTVPanel from '../components/CCTVPanel';
 import NewsPanel from '../components/NewsPanel';
+import TrendsPanel from '../components/TrendsPanel';
 import { motion } from 'framer-motion';
 
 const Dashboard = () => {
@@ -21,28 +22,37 @@ const Dashboard = () => {
           <MapPanel />
         </motion.div>
 
-        {/* Bottom Section: Side-by-side panels */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          {/* CCTV Section (Takes 3 columns) */}
+        {/* Intelligence Insights: Trends & Regional (Vertical Flow) */}
+        <div className="flex flex-col space-y-6">
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="lg:col-span-3 h-full min-h-0"
+            className="w-full"
           >
-            <CCTVPanel />
-          </motion.div>
-
-          {/* News Section (Takes 1 column) */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="h-full min-h-0"
-          >
-            <NewsPanel />
+            <TrendsPanel />
           </motion.div>
         </div>
+
+        {/* News Section (Below Insights) */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="w-full"
+        >
+          <NewsPanel />
+        </motion.div>
+
+        {/* CCTV Section (Bottom) */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="w-full"
+        >
+          <CCTVPanel />
+        </motion.div>
       </main>
 
       {/* System Footer Bar */}
