@@ -38,7 +38,7 @@ const SurveillanceMatrix = () => {
   const fetchStreams = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:5001/api/tv-streams');
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/tv-streams`);
       setStreams(response.data);
       setError(null);
     } catch (err) {
