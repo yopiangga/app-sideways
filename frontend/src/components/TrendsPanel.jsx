@@ -11,7 +11,7 @@ const TrendsPanel = () => {
   const fetchTrends = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`http://${import.meta.env.VITE_API_URL}/api/news-trends`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/news-trends`);
       setData(response.data);
       setError(null);
     } catch (err) {
